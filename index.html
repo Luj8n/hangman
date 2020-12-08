@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hangman</title>
+    <link rel="stylesheet" type="text/css" href="https://csshake.surge.sh/csshake.min.css">
+    <link rel="stylesheet" href="style\main.css">
+</head>
+
+<body>
+    <div class="input-container">
+        <h3 class="text">Enter your word</h3>
+        <div class="choose-content">
+            <div class="left-side">
+                <span class="first-letter-opt">Show first letter?</span>
+                <input class="toggle" id="first-letter-opt" type="checkbox" />
+                <span class="first-letter-opt">Show last letter?</span>
+                <input class="toggle" id="last-letter-opt" type="checkbox" />
+            </div>
+            <div>
+                <input type="password" class="js-answer" autofocus>
+            </div>
+            <div class="right-side">
+                <span>Choose your lives</span>
+                <p><i class="arrow up"></i></p>
+                <div class="lives">10</div>
+                <p><i class="arrow down"></i></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="game-container d-none hidden transform-to-small">
+        <div class="active-lives"></div>
+        <hr>
+        <div class="letter-row">
+            <span class="js-letter">ą</span>
+            <span class="js-letter">č</span>
+            <span class="js-letter">ę</span>
+            <span class="js-letter">ė</span>
+            <span class="js-letter">į</span>
+            <span class="js-letter">š</span>
+            <span class="js-letter">ų</span>
+            <span class="js-letter">ū</span>
+            <span class="js-letter">ž</span>
+        </div>
+        <div class="letter-row">
+            <span class="js-letter">q</span>
+            <span class="js-letter">w</span>
+            <span class="js-letter">e</span>
+            <span class="js-letter">r</span>
+            <span class="js-letter">t</span>
+            <span class="js-letter">y</span>
+            <span class="js-letter">u</span>
+            <span class="js-letter">i</span>
+            <span class="js-letter">o</span>
+            <span class="js-letter">p</span>
+        </div>
+        <div class="letter-row">
+            <span class="js-letter">a</span>
+            <span class="js-letter">s</span>
+            <span class="js-letter">d</span>
+            <span class="js-letter">f</span>
+            <span class="js-letter">g</span>
+            <span class="js-letter">h</span>
+            <span class="js-letter">j</span>
+            <span class="js-letter">k</span>
+            <span class="js-letter">l</span>
+        </div>
+        <div class="letter-row">
+            <span class="js-letter">z</span>
+            <span class="js-letter">x</span>
+            <span class="js-letter">c</span>
+            <span class="js-letter">v</span>
+            <span class="js-letter">b</span>
+            <span class="js-letter">n</span>
+            <span class="js-letter">m</span>
+        </div>
+        <hr>
+        <div class="js-ans-container">
+        </div>
+    </div>
+
+    <div class="game-over d-none hidden transform-to-small">
+        <h3 class="game-end-text"></h3>
+        <div class="reset-button">Reset game</div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
